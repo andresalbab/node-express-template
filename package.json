@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "dev": "env-cmd -f ./config/dev.env nodemon --exec babel-node src/index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js --exec babel-node",
     "start": "node dist/server.js",
     "test": "env-cmd -f ./config/test.env jest --watchAll --runInBand"
   },
@@ -16,10 +16,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.7.0",
     "@babel/core": "^7.7.2",
     "@babel/node": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
-    "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
